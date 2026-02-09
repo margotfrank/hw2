@@ -316,3 +316,10 @@ puts ""
 
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
 # TODO!
+actors = Actor.all
+
+for actor in actors
+  if actor["agent_id"] != nil
+    puts actor["actor_name"]
+  end
+end
