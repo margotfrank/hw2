@@ -78,9 +78,17 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Ensemblerole.destroy_all
+Actor.destroy_all
+Movie.destroy_all
+Agent.destroy_all
+Studio.destroy_all
+
 
 # Generate models and tables, according to the domain model.
 # TODO!
+# I generated the models and migration files to match the domain model within the terminal
+# I executed the migration files to create the tables in the database within the terminal
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
