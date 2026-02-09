@@ -93,6 +93,186 @@ Studio.destroy_all
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+studio = Studio.new
+studio["studio_name"] = "Warner Bros."
+studio.save
+
+movie = Movie.new
+movie["movie_title"] = "Batman Begins"
+movie["year_released"] = 2005
+movie["mpaa_rating"] = "PG-13"
+movie["studio_id"] = studio.id
+movie.save
+batman_begins = movie
+
+movie = Movie.new
+movie["movie_title"] = "The Dark Knight"
+movie["year_released"] = 2008
+movie["mpaa_rating"] = "PG-13"
+movie["studio_id"] = studio.id
+movie.save
+dark_knight = movie
+
+movie = Movie.new
+movie["movie_title"] = "The Dark Knight Rises"
+movie["year_released"] = 2012
+movie["mpaa_rating"] = "PG-13"
+movie["studio_id"] = studio.id
+movie.save
+dark_knight_rises = movie
+
+agent = Agent.new
+agent["agent_name"] = "Talent Agency"
+agent.save
+
+actor = Actor.new
+actor["actor_name"] = "Christian Bale"
+actor["agent_id"] = agent.id
+actor.save
+christian_bale = actor
+
+actor = Actor.new
+actor["actor_name"] = "Michael Caine"
+actor.save
+michael_caine = actor
+
+actor = Actor.new
+actor["actor_name"] = "Liam Neeson"
+actor.save
+liam_neeson = actor
+
+actor = Actor.new
+actor["actor_name"] = "Katie Holmes"
+actor.save
+katie_holmes = actor
+
+actor = Actor.new
+actor["actor_name"] = "Gary Oldman"
+actor.save
+gary_oldman = actor
+
+actor = Actor.new
+actor["actor_name"] = "Heath Ledger"
+actor.save
+heath_ledger = actor
+
+actor = Actor.new
+actor["actor_name"] = "Aaron Eckhart"
+actor.save
+aaron_eckhart = actor
+
+actor = Actor.new
+actor["actor_name"] = "Maggie Gyllenhaal"
+actor.save
+maggie_gyllenhaal = actor
+
+actor = Actor.new
+actor["actor_name"] = "Tom Hardy"
+actor.save
+tom_hardy = actor
+
+actor = Actor.new
+actor["actor_name"] = "Joseph Gordon-Levitt"
+actor.save
+joseph_gordon_levitt = actor
+
+actor = Actor.new
+actor["actor_name"] = "Anne Hathaway"
+actor.save
+anne_hathaway = actor
+
+
+role = Ensemblerole.new
+role["movie_id"] = batman_begins.id
+role["actor_id"] = christian_bale.id
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = batman_begins.id
+role["actor_id"] = michael_caine.id
+role["character_name"] = "Alfred"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = batman_begins.id
+role["actor_id"] = liam_neeson.id
+role["character_name"] = "Ra's Al Ghul"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = batman_begins.id
+role["actor_id"] = katie_holmes.id
+role["character_name"] = "Rachel Dawes"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = batman_begins.id
+role["actor_id"] = gary_oldman.id
+role["character_name"] = "Commissioner Gordon"
+role.save
+
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight.id
+role["actor_id"] = christian_bale.id
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight.id
+role["actor_id"] = heath_ledger.id
+role["character_name"] = "Joker"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight.id
+role["actor_id"] = aaron_eckhart.id
+role["character_name"] = "Harvey Dent"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight.id
+role["actor_id"] = michael_caine.id
+role["character_name"] = "Alfred"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight.id
+role["actor_id"] = maggie_gyllenhaal.id
+role["character_name"] = "Rachel Dawes"
+role.save
+
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight_rises.id
+role["actor_id"] = christian_bale.id
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight_rises.id
+role["actor_id"] = gary_oldman.id
+role["character_name"] = "Commissioner Gordon"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight_rises.id
+role["actor_id"] = tom_hardy.id
+role["character_name"] = "Bane"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight_rises.id
+role["actor_id"] = joseph_gordon_levitt.id
+role["character_name"] = "John Blake"
+role.save
+
+role = Ensemblerole.new
+role["movie_id"] = dark_knight_rises.id
+role["actor_id"] = anne_hathaway.id
+role["character_name"] = "Selina Kyle"
+role.save
 
 # Prints a header for the movies output
 puts "Movies"
